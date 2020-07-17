@@ -9,7 +9,7 @@ using GraphicRedactor000.Brush;
 
 namespace GraphicRedactor000.Tool
 {
-    public class EraserTool : PenTool, ITool
+    public class EraserTool :  ITool
     {
         bool cursorActive;
         int x1, y1, x2, y2;
