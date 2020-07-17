@@ -37,7 +37,7 @@ namespace GraphicRedactor000
         {
             startProgram();
             paintColor1 = Color.Black;
-            brushSize = 5;
+            brushSize = 3;
             brush = new CircleBrush(brushSize, paintColor1);
             tool = new PenTool();
         }
@@ -146,6 +146,10 @@ namespace GraphicRedactor000
             tool = new EraserTool();
         }
 
-       
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            labelSize.Text = trackBar1.Value + "";
+            brush.BrushSize = Convert.ToInt32(labelSize.Text);
+        }
     }
 }

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonEraser = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.Square = new System.Windows.Forms.Button();
@@ -47,12 +49,25 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelSize = new System.Windows.Forms.Label();
+            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.инфоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.labelSize);
+            this.panel1.Controls.Add(this.trackBar1);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonEraser);
             this.panel1.Controls.Add(this.buttonClear);
             this.panel1.Controls.Add(this.Square);
@@ -68,15 +83,38 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(987, 52);
+            this.panel1.Size = new System.Drawing.Size(987, 62);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Cursor = System.Windows.Forms.Cursors.NoMoveHoriz;
+            this.trackBar1.Location = new System.Drawing.Point(833, 24);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(0);
+            this.trackBar1.Maximum = 60;
+            this.trackBar1.Minimum = 1;
+            this.trackBar1.MinimumSize = new System.Drawing.Size(0, 20);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(154, 45);
+            this.trackBar1.TabIndex = 0;
+            this.trackBar1.Value = 5;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(841, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "размер кисти (px)";
             // 
             // buttonEraser
             // 
             this.buttonEraser.BackgroundImage = global::GraphicRedactor000.Properties.Resources.eraser;
             this.buttonEraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonEraser.Location = new System.Drawing.Point(362, 17);
+            this.buttonEraser.Location = new System.Drawing.Point(519, 24);
             this.buttonEraser.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEraser.Name = "buttonEraser";
             this.buttonEraser.Size = new System.Drawing.Size(28, 28);
@@ -88,7 +126,7 @@
             // 
             this.buttonClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonClear.BackgroundImage")));
             this.buttonClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonClear.Location = new System.Drawing.Point(593, 17);
+            this.buttonClear.Location = new System.Drawing.Point(593, 26);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(28, 28);
@@ -100,7 +138,7 @@
             // 
             this.Square.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Square.BackgroundImage")));
             this.Square.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Square.Location = new System.Drawing.Point(428, 17);
+            this.Square.Location = new System.Drawing.Point(394, 24);
             this.Square.Margin = new System.Windows.Forms.Padding(2);
             this.Square.Name = "Square";
             this.Square.Size = new System.Drawing.Size(28, 28);
@@ -112,7 +150,7 @@
             // 
             this.buttonEquilaralTriangle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEquilaralTriangle.BackgroundImage")));
             this.buttonEquilaralTriangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonEquilaralTriangle.Location = new System.Drawing.Point(396, 17);
+            this.buttonEquilaralTriangle.Location = new System.Drawing.Point(362, 24);
             this.buttonEquilaralTriangle.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEquilaralTriangle.Name = "buttonEquilaralTriangle";
             this.buttonEquilaralTriangle.Size = new System.Drawing.Size(28, 28);
@@ -124,7 +162,7 @@
             // 
             this.buttonTriangle.BackgroundImage = global::GraphicRedactor000.Properties.Resources.triangle;
             this.buttonTriangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonTriangle.Location = new System.Drawing.Point(330, 17);
+            this.buttonTriangle.Location = new System.Drawing.Point(330, 26);
             this.buttonTriangle.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTriangle.Name = "buttonTriangle";
             this.buttonTriangle.Size = new System.Drawing.Size(28, 28);
@@ -136,7 +174,7 @@
             // 
             this.buttonRectangle.BackgroundImage = global::GraphicRedactor000.Properties.Resources.rectangle;
             this.buttonRectangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonRectangle.Location = new System.Drawing.Point(292, 17);
+            this.buttonRectangle.Location = new System.Drawing.Point(298, 26);
             this.buttonRectangle.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRectangle.Name = "buttonRectangle";
             this.buttonRectangle.Size = new System.Drawing.Size(28, 28);
@@ -148,7 +186,7 @@
             // 
             this.buttonCircle.BackgroundImage = global::GraphicRedactor000.Properties.Resources.circle;
             this.buttonCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonCircle.Location = new System.Drawing.Point(256, 17);
+            this.buttonCircle.Location = new System.Drawing.Point(266, 26);
             this.buttonCircle.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCircle.Name = "buttonCircle";
             this.buttonCircle.Size = new System.Drawing.Size(28, 28);
@@ -159,7 +197,7 @@
             // 
             this.buttonDraw.BackgroundImage = global::GraphicRedactor000.Properties.Resources.editor_pencil_pen_edit_write_glyph_256;
             this.buttonDraw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonDraw.Location = new System.Drawing.Point(88, 17);
+            this.buttonDraw.Location = new System.Drawing.Point(153, 26);
             this.buttonDraw.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDraw.Name = "buttonDraw";
             this.buttonDraw.Size = new System.Drawing.Size(28, 28);
@@ -171,7 +209,7 @@
             // 
             this.buttonDrawLine.BackgroundImage = global::GraphicRedactor000.Properties.Resources.line_icon_256;
             this.buttonDrawLine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonDrawLine.Location = new System.Drawing.Point(50, 17);
+            this.buttonDrawLine.Location = new System.Drawing.Point(112, 26);
             this.buttonDrawLine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDrawLine.Name = "buttonDrawLine";
             this.buttonDrawLine.Size = new System.Drawing.Size(28, 28);
@@ -183,7 +221,7 @@
             // 
             this.buttonChangeColor.BackgroundImage = global::GraphicRedactor000.Properties.Resources.fill;
             this.buttonChangeColor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonChangeColor.Location = new System.Drawing.Point(166, 17);
+            this.buttonChangeColor.Location = new System.Drawing.Point(487, 26);
             this.buttonChangeColor.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChangeColor.Name = "buttonChangeColor";
             this.buttonChangeColor.Size = new System.Drawing.Size(28, 28);
@@ -194,6 +232,10 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.файлToolStripMenuItem,
+            this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(987, 24);
@@ -241,6 +283,57 @@
             this.timer1.Interval = 200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // labelSize
+            // 
+            this.labelSize.AutoSize = true;
+            this.labelSize.Location = new System.Drawing.Point(953, 9);
+            this.labelSize.Name = "labelSize";
+            this.labelSize.Size = new System.Drawing.Size(13, 13);
+            this.labelSize.TabIndex = 20;
+            this.labelSize.Text = "5";
+            // 
+            // файлToolStripMenuItem
+            // 
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.открытьToolStripMenuItem,
+            this.сохранитьToolStripMenuItem,
+            this.выйтиToolStripMenuItem});
+            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.файлToolStripMenuItem.Text = "Файл";
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.инфоToolStripMenuItem});
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            // 
+            // инфоToolStripMenuItem
+            // 
+            this.инфоToolStripMenuItem.Name = "инфоToolStripMenuItem";
+            this.инфоToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.инфоToolStripMenuItem.Text = "Инфо";
+            // 
+            // открытьToolStripMenuItem
+            // 
+            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьToolStripMenuItem.Text = "Открыть";
+            // 
+            // сохранитьToolStripMenuItem
+            // 
+            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Text = "Сохранить";
+            // 
+            // выйтиToolStripMenuItem
+            // 
+            this.выйтиToolStripMenuItem.Name = "выйтиToolStripMenuItem";
+            this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выйтиToolStripMenuItem.Text = "Выйти";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,10 +343,13 @@
             this.Controls.Add(this.pictureBox1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "GraphicRedactor000";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -279,6 +375,15 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button buttonEraser;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelSize;
+        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выйтиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem инфоToolStripMenuItem;
     }
 }
 
