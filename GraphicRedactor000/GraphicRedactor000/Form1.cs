@@ -151,5 +151,10 @@ namespace GraphicRedactor000
             labelSize.Text = trackBar1.Value + "";
             brush.BrushSize = Convert.ToInt32(labelSize.Text);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tool = new FigureTool(new Figure.Ellips());
+        }
     }
 }

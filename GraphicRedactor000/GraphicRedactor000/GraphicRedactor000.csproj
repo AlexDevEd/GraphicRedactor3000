@@ -55,7 +55,7 @@
     <Compile Include="Draw\DrawFigure.cs" />
     <Compile Include="Draw\IDraw.cs" />
     <Compile Include="Figure\Circle.cs" />
-    <Compile Include="Figure\Elipse.cs" />
+    <Compile Include="Figure\Ellipse.cs" />
     <Compile Include="Figure\EquilateralTriangle.cs" />
     <Compile Include="Figure\IFigure.cs" />
     <Compile Include="Figure\Line.cs" />
@@ -126,6 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ellipse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ellipse1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
