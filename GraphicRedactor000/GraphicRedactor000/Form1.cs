@@ -14,12 +14,14 @@ using GraphicRedactor000.Brush;
 using GraphicRedactor000.Figure;
 using System.Threading;
 using System.Diagnostics;
+using System.IO;
 
 namespace GraphicRedactor000
 {
     public partial class Form1 :Form
     {
         public bool cursorAktive;
+        Canva canva;
         ITool tool;
         IBrush brush;
         Color paintColor1;
@@ -37,7 +39,7 @@ namespace GraphicRedactor000
         {
             startProgram();
             paintColor1 = Color.Black;
-            brushSize = 5;
+            brushSize = 3;
             brush = new CircleBrush(brushSize, paintColor1);
             tool = new PenTool();
         }
@@ -146,6 +148,43 @@ namespace GraphicRedactor000
             tool = new EraserTool();
         }
 
-       
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            labelSize.Text = trackBar1.Value + "";
+            brush.BrushSize = Convert.ToInt32(labelSize.Text);
+        }
+
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {          
+                saveFileDialog1.Filter = " Portable net graphics (*.png)|*.png| Bitmap files (*.bmp)|*.bmp";
+                saveFileDialog1.FilterIndex = 1;
+                saveFileDialog1.RestoreDirectory = true;
+
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    Canva.GetCanva.Bmp.Save(saveFileDialog1.FileName);
+                }
+            MessageBox.Show("Файл успешно сохранён");
+
+        }
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {                    
+                string filePath;
+                openFileDialog1.InitialDirectory = "c:\\";
+                openFileDialog1.Filter = " All files (*.*)|*.*| Portable net graphics (*.png)|*.png| Bitmap files (*.bmp)|*.bmp";
+                openFileDialog1.FilterIndex = 2;
+                openFileDialog1.RestoreDirectory = true;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = openFileDialog1.FileName;
+                    pictureBox1.Load(filePath + "");
+                    startProgram();                   
+                }           
+        }
+        private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
