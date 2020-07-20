@@ -152,9 +152,14 @@ namespace GraphicRedactor000
             brush.BrushSize = Convert.ToInt32(labelSize.Text);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonEllipse_Click(object sender, EventArgs e)
         {
             tool = new FigureTool(new Figure.Ellips());
+        }
+
+        private void buttonCircle_Click(object sender, EventArgs e)
+        {
+            tool = new FigureTool(new Figure.Circle());
         }
     }
 }
