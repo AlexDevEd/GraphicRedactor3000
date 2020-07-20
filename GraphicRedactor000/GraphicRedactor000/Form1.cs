@@ -148,12 +148,6 @@ namespace GraphicRedactor000
             tool = new EraserTool();
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            labelSize.Text = trackBar1.Value + "";
-            brush.BrushSize = Convert.ToInt32(labelSize.Text);
-        }
-
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {          
                 saveFileDialog1.Filter = " Portable net graphics (*.png)|*.png| Bitmap files (*.bmp)|*.bmp";
@@ -185,6 +179,16 @@ namespace GraphicRedactor000
         private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            labelSize.Text = trackBar1.Value + "";
+            brush.BrushSize = Convert.ToInt32(labelSize.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tool = new FigureTool(new Figure.Ellips());
         }
     }
 }
