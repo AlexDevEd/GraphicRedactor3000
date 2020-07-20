@@ -24,7 +24,7 @@ namespace GraphicRedactor000
         IBrush brush;
         Color paintColor1;
         int brushSize;
-        string title = "Преветствую вас.Это GraphicRedactor000 ";
+        string title = "Приветствую вас! Это GraphicRedactor000.";
         string curTitle;
         
         public Form1()
