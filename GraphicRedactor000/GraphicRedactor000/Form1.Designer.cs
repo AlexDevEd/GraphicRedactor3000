@@ -98,7 +98,7 @@
             this.Ellipse.Size = new System.Drawing.Size(34, 26);
             this.Ellipse.TabIndex = 21;
             this.Ellipse.UseVisualStyleBackColor = true;
-            this.Ellipse.Click += new System.EventHandler(this.button1_Click);
+            this.Ellipse.Click += new System.EventHandler(this.buttonEllipse_Click);
             // 
             // labelSize
             // 
