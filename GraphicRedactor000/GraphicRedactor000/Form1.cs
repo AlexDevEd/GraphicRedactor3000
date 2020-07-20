@@ -161,5 +161,10 @@ namespace GraphicRedactor000
         {
             tool = new FigureTool(new Figure.Circle());
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
