@@ -21,7 +21,7 @@ namespace GraphicRedactor000
     public partial class Form1 :Form
     {
         public bool cursorAktive;
-        Canva canva;
+       // Canva canva;
         ITool tool;
         IBrush brush;
         Color paintColor1;
@@ -189,6 +189,11 @@ namespace GraphicRedactor000
         private void button1_Click(object sender, EventArgs e)
         {
             tool = new FigureTool(new Figure.Ellips());
+        }
+
+        private void buttonCircle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
