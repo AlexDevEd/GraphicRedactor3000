@@ -93,9 +93,9 @@
             // 
             this.Ellipse.BackgroundImage = global::GraphicRedactor000.Properties.Resources.ellipse1;
             this.Ellipse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ellipse.Location = new System.Drawing.Point(425, 26);
+            this.Ellipse.Location = new System.Drawing.Point(134, 29);
             this.Ellipse.Name = "Ellipse";
-            this.Ellipse.Size = new System.Drawing.Size(34, 26);
+            this.Ellipse.Size = new System.Drawing.Size(28, 28);
             this.Ellipse.TabIndex = 21;
             this.Ellipse.UseVisualStyleBackColor = true;
             this.Ellipse.Click += new System.EventHandler(this.buttonEllipse_Click);
@@ -112,7 +112,7 @@
             // trackBar1
             // 
             this.trackBar1.Cursor = System.Windows.Forms.Cursors.NoMoveHoriz;
-            this.trackBar1.Location = new System.Drawing.Point(833, 24);
+            this.trackBar1.Location = new System.Drawing.Point(833, 29);
             this.trackBar1.Margin = new System.Windows.Forms.Padding(0);
             this.trackBar1.Maximum = 60;
             this.trackBar1.Minimum = 1;
@@ -128,15 +128,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(841, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "размер кисти (px)";
+            this.label1.Text = "Размер кисти (px)";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // buttonEraser
             // 
             this.buttonEraser.BackgroundImage = global::GraphicRedactor000.Properties.Resources.eraser;
             this.buttonEraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonEraser.Location = new System.Drawing.Point(519, 24);
+            this.buttonEraser.Location = new System.Drawing.Point(327, 29);
             this.buttonEraser.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEraser.Name = "buttonEraser";
             this.buttonEraser.Size = new System.Drawing.Size(28, 28);
@@ -148,7 +149,7 @@
             // 
             this.buttonClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonClear.BackgroundImage")));
             this.buttonClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonClear.Location = new System.Drawing.Point(593, 26);
+            this.buttonClear.Location = new System.Drawing.Point(69, 29);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(28, 28);
@@ -160,7 +161,7 @@
             // 
             this.Square.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Square.BackgroundImage")));
             this.Square.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Square.Location = new System.Drawing.Point(394, 24);
+            this.Square.Location = new System.Drawing.Point(199, 29);
             this.Square.Margin = new System.Windows.Forms.Padding(2);
             this.Square.Name = "Square";
             this.Square.Size = new System.Drawing.Size(28, 28);
@@ -172,7 +173,7 @@
             // 
             this.buttonEquilaralTriangle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEquilaralTriangle.BackgroundImage")));
             this.buttonEquilaralTriangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonEquilaralTriangle.Location = new System.Drawing.Point(362, 24);
+            this.buttonEquilaralTriangle.Location = new System.Drawing.Point(263, 29);
             this.buttonEquilaralTriangle.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEquilaralTriangle.Name = "buttonEquilaralTriangle";
             this.buttonEquilaralTriangle.Size = new System.Drawing.Size(28, 28);
@@ -184,7 +185,7 @@
             // 
             this.buttonTriangle.BackgroundImage = global::GraphicRedactor000.Properties.Resources.triangle;
             this.buttonTriangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonTriangle.Location = new System.Drawing.Point(330, 26);
+            this.buttonTriangle.Location = new System.Drawing.Point(231, 29);
             this.buttonTriangle.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTriangle.Name = "buttonTriangle";
             this.buttonTriangle.Size = new System.Drawing.Size(28, 28);
@@ -196,10 +197,10 @@
             // 
             this.buttonRectangle.BackgroundImage = global::GraphicRedactor000.Properties.Resources.rectangle;
             this.buttonRectangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonRectangle.Location = new System.Drawing.Point(298, 26);
+            this.buttonRectangle.Location = new System.Drawing.Point(167, 29);
             this.buttonRectangle.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRectangle.Name = "buttonRectangle";
-            this.buttonRectangle.Size = new System.Drawing.Size(28, 28);
+            this.buttonRectangle.Size = new System.Drawing.Size(28, 29);
             this.buttonRectangle.TabIndex = 5;
             this.buttonRectangle.UseVisualStyleBackColor = true;
             this.buttonRectangle.Click += new System.EventHandler(this.buttonRectangle_Click);
@@ -208,7 +209,7 @@
             // 
             this.buttonCircle.BackgroundImage = global::GraphicRedactor000.Properties.Resources.circle;
             this.buttonCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonCircle.Location = new System.Drawing.Point(266, 26);
+            this.buttonCircle.Location = new System.Drawing.Point(101, 29);
             this.buttonCircle.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCircle.Name = "buttonCircle";
             this.buttonCircle.Size = new System.Drawing.Size(28, 28);
@@ -220,7 +221,7 @@
             // 
             this.buttonDraw.BackgroundImage = global::GraphicRedactor000.Properties.Resources.editor_pencil_pen_edit_write_glyph_256;
             this.buttonDraw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonDraw.Location = new System.Drawing.Point(153, 26);
+            this.buttonDraw.Location = new System.Drawing.Point(5, 29);
             this.buttonDraw.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDraw.Name = "buttonDraw";
             this.buttonDraw.Size = new System.Drawing.Size(28, 28);
@@ -232,7 +233,7 @@
             // 
             this.buttonDrawLine.BackgroundImage = global::GraphicRedactor000.Properties.Resources.line_icon_256;
             this.buttonDrawLine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonDrawLine.Location = new System.Drawing.Point(112, 26);
+            this.buttonDrawLine.Location = new System.Drawing.Point(37, 29);
             this.buttonDrawLine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDrawLine.Name = "buttonDrawLine";
             this.buttonDrawLine.Size = new System.Drawing.Size(28, 28);
@@ -244,7 +245,7 @@
             // 
             this.buttonChangeColor.BackgroundImage = global::GraphicRedactor000.Properties.Resources.fill;
             this.buttonChangeColor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonChangeColor.Location = new System.Drawing.Point(487, 26);
+            this.buttonChangeColor.Location = new System.Drawing.Point(295, 29);
             this.buttonChangeColor.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChangeColor.Name = "buttonChangeColor";
             this.buttonChangeColor.Size = new System.Drawing.Size(28, 28);
@@ -277,19 +278,19 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             // 
             // выйтиToolStripMenuItem
             // 
             this.выйтиToolStripMenuItem.Name = "выйтиToolStripMenuItem";
-            this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.выйтиToolStripMenuItem.Text = "Выйти";
             // 
             // оПрограммеToolStripMenuItem

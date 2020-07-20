@@ -24,7 +24,7 @@ namespace GraphicRedactor000
         IBrush brush;
         Color paintColor1;
         int brushSize;
-        string title = "Преветствую вас.Это GraphicRedactor000 ";
+        string title = "Приветствую вас! Это GraphicRedactor000.";
         string curTitle;
         
         public Form1()
@@ -160,6 +160,11 @@ namespace GraphicRedactor000
         private void buttonCircle_Click(object sender, EventArgs e)
         {
             tool = new FigureTool(new Figure.Circle());
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
